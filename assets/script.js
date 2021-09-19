@@ -8,6 +8,10 @@ $(document).ready(function () {
     var name = Number($(this).attr("name"));
     if (name > now) {
       $(this).addClass("future");
+    } else if (name < now) {
+      $(this).addClass("past");
+    } else {
+      $(this).addClass("present");
     }
   });
 });
